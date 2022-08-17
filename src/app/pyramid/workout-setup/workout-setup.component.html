@@ -1,0 +1,23 @@
+<p>workout-setup works!</p>
+
+<button mat-raised-button color="primary" (click)="goToWorkout()">
+  Do the Pyramid Workout
+</button>
+
+<div *ngIf="user$ | async as user">
+  <h3>Howdy, {{ user.displayName }}</h3>
+  <img [src]="user.photoURL" />
+  <p>UID: {{ user.uid }}</p>
+</div>
+
+<!-- <ul>
+  <li class="text" *ngFor="let user of users | async">
+    {{ user.displayName }}
+  </li>
+</ul>
+
+<mat-list>
+  <mat-list-item class="text" *ngFor="let workout of workouts | async">
+    {{ workout }}
+  </mat-list-item>
+</mat-list> -->

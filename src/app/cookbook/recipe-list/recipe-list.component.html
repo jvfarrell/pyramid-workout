@@ -1,0 +1,11 @@
+<ul>
+  <li class="text" *ngFor="let recipe of recipes | async">
+    {{ recipe.name }}
+  </li>
+</ul>
+
+<mat-list>
+  <mat-list-item class="text" *ngFor="let recipe of recipes | async">
+    {{ recipe.name }}
+  </mat-list-item>
+</mat-list>

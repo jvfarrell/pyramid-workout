@@ -1,0 +1,90 @@
+<div>
+  <h3>Pyramid Workout</h3>
+
+  <!-- <mat-grid-list role="list">
+    <mat-list-item role="listitem">Swing</mat-list-item>
+    <mat-list-item role="listitem">Squat</mat-list-item>
+    <mat-list-item role="listitem">Press</mat-list-item>
+    <mat-list-item role="listitem">Pull</mat-list-item>
+    <mat-list-item role="listitem">Push</mat-list-item>
+  </mat-grid-list> -->
+  <!--
+  <div class="list">
+    <div class="tile">Swing</div>
+    <div class="tile">Squat</div>
+    <div class="tile">Press</div>
+    <div class="tile">Pull</div>
+    <div class="tile">Push</div>
+  </div>
+
+  <mat-list>
+    <mat-list-item role="listitem">Swing</mat-list-item>
+    <mat-list-item role="listitem">Squat</mat-list-item>
+    <mat-list-item role="listitem">Press</mat-list-item>
+    <mat-list-item role="listitem">Pull</mat-list-item>
+    <mat-list-item role="listitem">Push</mat-list-item>
+  </mat-list> -->
+
+  <ul>
+    <li>Swing</li>
+    <li>Squat</li>
+    <li>Press</li>
+    <li>Pull</li>
+    <li>Push</li>
+  </ul>
+
+  <h1>Reps: {{ this.curRep }}</h1>
+  <!-- <p>Rest for {{ sw.restTime }}</p>
+
+  <p>resting {{ sw.resting }}</p> -->
+  <!--accent text for rest timer blue while resting-->
+  <h1 *ngIf="this.resting" class="chill">Rest for {{ this.restTime }}</h1>
+  <h1 *ngIf="!this.resting" class="hype">WORKOUT TIME</h1>
+
+  <button
+    *ngIf="!this.started && this.goingUp"
+    mat-raised-button
+    color="primary"
+    (click)="this.start()"
+  >
+    START
+  </button>
+
+  <button
+    *ngIf="!this.resting && this.started && !this.done"
+    mat-raised-button
+    color="accent"
+    (click)="this.rest()"
+  >
+    Rest
+  </button>
+  <button
+    *ngIf="this.resting && !this.done"
+    mat-raised-button
+    disabled
+    color="accent"
+    (click)="this.rest()"
+  >
+    Rest
+  </button>
+
+  <button
+    *ngIf="this.done && this.started"
+    mat-raised-button
+    color="primary"
+    (click)="this.end()"
+  >
+    DONE
+  </button>
+
+  <button
+    *ngIf="!this.started && this.done"
+    mat-raised-button
+    color="accent"
+    (click)="this.nextPage()"
+  >
+    Next Page
+  </button>
+
+  <p>Total Time {{ this.totalTime * 1000 | date: "mm:ss" }}</p>
+</div>

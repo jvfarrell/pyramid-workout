@@ -1,0 +1,273 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+
+@include mat.core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+/* For use in src/lib/core/theming/_palette.scss */
+$md-plum: (
+  50: #ede6e9,
+  100: #d1c1c8,
+  200: #b398a3,
+  300: #956f7e,
+  400: #7e5063,
+  500: #673147,
+  600: #5f2c40,
+  700: #542537,
+  800: #4a1f2f,
+  900: #391320,
+  A100: #ff77a1,
+  A200: #ff447e,
+  A400: #ff115b,
+  A700: #f6004d,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-plum-compliment: (
+  50: #e6edea,
+  100: #c1d1cb,
+  200: #98b3a8,
+  300: #6f9585,
+  400: #507e6b,
+  500: #316751,
+  600: #2c5f4a,
+  700: #255440,
+  800: #1f4a37,
+  900: #133927,
+  A100: #77ffbb,
+  A200: #44ffa1,
+  A400: #11ff88,
+  A700: #00f67b,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-lightgreen: (
+  50: #f7fbfa,
+  100: #eaf5f2,
+  200: #dcefe9,
+  300: #cee8e0,
+  400: #c4e3da,
+  500: #b9ded3,
+  600: #b2dace,
+  700: #aad5c8,
+  800: #a2d1c2,
+  900: #93c8b7,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fcfffe,
+  A700: #e3fff6,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-light-compliment: (
+  50: #fdf7f9,
+  100: #faebf0,
+  200: #f7dee6,
+  300: #f3d1dc,
+  400: #f1c7d5,
+  500: #eebdcd,
+  600: #ecb7c8,
+  700: #e9aec1,
+  800: #e7a6ba,
+  900: #e298ae,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-uva: (
+  50: #ecf6fd,
+  100: #cfe8fb,
+  200: #afd8f9,
+  300: #8ec8f6,
+  400: #76bdf4,
+  500: #5eb1f2,
+  600: #56aaf0,
+  700: #4ca1ee,
+  800: #4298ec,
+  900: #3188e8,
+  A100: #ffffff,
+  A200: #f9fcff,
+  A400: #c6e0ff,
+  A700: #add2ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-uvasecondary: (
+  50: #fdf3ec,
+  100: #fbe2cf,
+  200: #f9cfaf,
+  300: #f6bb8e,
+  400: #f4ad76,
+  500: #f29e5e,
+  600: #f09656,
+  700: #ee8c4c,
+  800: #ec8242,
+  900: #e87031,
+  A100: #ffffff,
+  A200: #fffbf9,
+  A400: #ffd8c6,
+  A700: #ffc7ad,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$firestarter-primary: mat.define-palette($md-plum);
+$firestarter-accent: mat.define-palette($md-plum-compliment, A200, A100, A400);
+
+$firestarter-primary-2: mat.define-palette($md-lightgreen);
+$firestarter-accent-2: mat.define-palette(
+  $md-light-compliment,
+  A200,
+  A100,
+  A400
+);
+
+// The warn palette is optional (defaults to red).
+$firestarter-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$firestarter-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $firestarter-primary,
+      accent: $firestarter-accent,
+      warn: $firestarter-warn,
+    ),
+  )
+);
+
+// $firestarter-theme: mat.define-light-theme(
+//   (
+//     color: (
+//       primary: $firestarter-primary-2,
+//       accent: $firestarter-accent-2,
+//       warn: $firestarter-warn,
+//     ),
+//   )
+// );
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($firestarter-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: sofia-pro, sans-serif;
+  // font-family: "Russo One", sans-serif;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
