@@ -13,9 +13,6 @@
     <mat-nav-list>
       <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
       <a mat-list-item routerLink="/login" (click)="drawer.close()">Login</a>
-      <a mat-list-item routerLink="/cookbook" (click)="drawer.close()"
-        >Cookbook Demo</a
-      >
       <a mat-list-item routerLink="/pyramid" (click)="drawer.close()"
         >Pyramid Demo</a
       >
@@ -34,12 +31,11 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="logo" routerLink="/">📚 Farrell Cookbook</span>
+      <span class="logo" routerLink="/">⚡ Pyramid Workout</span>
 
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
-        <a mat-button routerLink="/cookbook">📚 Cookbook Demo</a>
-        <a mat-button routerLink="/pyramid">⚡ Pyramid Workout</a>
+        <a mat-button routerLink="/pyramid/go">⚡ Start Workout</a>
 
         <a mat-button routerLink="/login">🔑 Login</a>
       </div>

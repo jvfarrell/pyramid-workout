@@ -10,15 +10,10 @@ const routes: Routes = [
     loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
   {
-    path: 'cookbook',
-    loadChildren: () =>
-      import('./cookbook/cookbook.module').then((m) => m.CookbookModule),
-    canActivate: [AuthGuard],
-  },
-  {
     path: 'pyramid',
     loadChildren: () =>
       import('./pyramid/pyramid.module').then((m) => m.PyramidModule),
+    canActivate: [AuthGuard],
   },
 ];
 
