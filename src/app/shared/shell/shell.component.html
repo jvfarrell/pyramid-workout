@@ -14,7 +14,10 @@
       <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
       <a mat-list-item routerLink="/login" (click)="drawer.close()">Login</a>
       <a mat-list-item routerLink="/pyramid" (click)="drawer.close()"
-        >Pyramid Demo</a
+        >Pyramid Workout</a
+      >
+      <a mat-list-item routerLink="/pyramid/demo" (click)="drawer.close()"
+        >Demo Workout</a
       >
     </mat-nav-list>
   </mat-sidenav>
@@ -35,6 +38,7 @@
 
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
+        <a mat-button routerLink="/pyramid/demo">💪 Demo Workout</a>
         <a mat-button routerLink="/pyramid/go">⚡ Start Workout</a>
 
         <a mat-button routerLink="/login">🔑 Login</a>

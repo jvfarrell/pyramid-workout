@@ -12,9 +12,10 @@ import { environment } from '../../environments/environment';
 import { SharedModule } from '../shared/shared.module';
 import { WorkoutComponent } from './workout/workout.component';
 import { DoneComponent } from './done/done.component';
+import { WorkoutDemoComponent } from './workout-demo/workout-demo.component';
 
 @NgModule({
-  declarations: [WorkoutSetupComponent, WorkoutComponent, DoneComponent],
+  declarations: [WorkoutSetupComponent, WorkoutComponent, DoneComponent, WorkoutDemoComponent],
   imports: [
     CommonModule,
     PyramidRoutingModule,

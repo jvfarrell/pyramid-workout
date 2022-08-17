@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { StopwatchService } from '../stopwatch.service';
 
 @Component({
-  selector: 'app-workout',
-  templateUrl: './workout.component.html',
-  styleUrls: ['./workout.component.scss'],
+  selector: 'app-workout-demo',
+  templateUrl: './workout-demo.component.html',
+  styleUrls: ['./workout-demo.component.scss'],
 })
-export class WorkoutComponent implements OnInit {
+export class WorkoutDemoComponent implements OnInit {
   totalTime = 0;
-  restTimeAllowed = 60;
+  restTimeAllowed = 3;
 
   restTime = this.restTimeAllowed;
   resting = false;
@@ -40,7 +40,7 @@ export class WorkoutComponent implements OnInit {
     this.restTime = this.restTimeAllowed;
     this.totalTime = 0;
     this.timeTaken = 0;
-    this.maxRep = 8;
+    this.maxRep = 2;
     this.curRep = 1;
     clearInterval(this.restTimer);
     clearInterval(this.ttimer);
