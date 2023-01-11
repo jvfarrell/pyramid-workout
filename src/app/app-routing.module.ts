@@ -21,6 +21,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, {
       initialNavigation: 'enabled',
+      useHash: true // stops the 404 error from happening when a user refreshes the page (since it's a single page app)
     }),
   ],
   exports: [RouterModule],
