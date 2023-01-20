@@ -1,3 +1,26 @@
-header {
-  text-align: center;
+// header {
+//   text-align: center;
+// }
+
+// .card-text {
+//     margin: 10px;
+//     min-width: 300px;
+//     max-width: 300px;
+//     padding: 10px;
+//     background: #212121;
+//   }
+
+  .home-card {
+  max-width: 640px;
+}
+
+.header-image {
+  background-image: url('../../assets/icons/icon-128x128.png');
+  background-size: cover;
+}
+
+.main-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
