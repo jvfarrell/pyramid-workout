@@ -19,6 +19,9 @@
       <a mat-list-item routerLink="/pyramid/demo" (click)="drawer.close()"
         >Demo Workout</a
       >
+      <a mat-list-item routerLink="/kanban" (click)="drawer.close()"
+        >Kanban</a
+      >
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -38,6 +41,7 @@
 
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
+        <a mat-button routerLink="/kanban">📃 Kanban</a>
         <a mat-button routerLink="/pyramid/demo">💪 Demo Workout</a>
         <a mat-button routerLink="/pyramid/go">⚡ Start Workout</a>
 

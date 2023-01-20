@@ -15,6 +15,12 @@ const routes: Routes = [
       import('./pyramid/pyramid.module').then((m) => m.PyramidModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'kanban',
+    loadChildren: () =>
+      import('./kanban/kanban.module').then((m) => m.KanbanModule),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
