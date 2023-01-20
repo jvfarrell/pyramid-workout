@@ -5,5 +5,19 @@ service cloud.firestore {
       allow read, write: if
           request.time < timestamp.date(2022, 9, 11);
     }
+    match /boards/{document} {
+      allow read;
+      allow create: if requestMatchesUID();
+      allow update: if resourceMatchesUID() && requestMatchesUID();
+      allow delete: if resourceMatchesUID();
+    }
+
+    function requestMatchesUID() {
+        return request.auth.uid == request.resource.data.uid;
+    }
+
+    function resourceMatchesUID() {
+        return request.auth.uid == resource.data.uid;
+    }
   }
 }
