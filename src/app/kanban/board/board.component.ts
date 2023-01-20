@@ -50,4 +50,8 @@ export class BoardComponent implements OnInit {
     });
   }
 
+  handleDelete() {
+    this.boardService.deleteBoard(this.board.id);
+  }
+
 }
