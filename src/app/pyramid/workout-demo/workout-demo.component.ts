@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StopwatchService } from '../stopwatch.service';
-
 @Component({
   selector: 'app-workout-demo',
   templateUrl: './workout-demo.component.html',
@@ -20,6 +19,8 @@ export class WorkoutDemoComponent implements OnInit {
   curRep = 1;
   maxRep = 8;
   timeTaken = 0;
+  restAudioTimer: any;
+  alertSound: any;
   restTimer: any;
   ttimer: any;
   checkDone: any;
@@ -60,6 +61,7 @@ export class WorkoutDemoComponent implements OnInit {
     clearInterval(this.checkDone);
     this.sw.timeTaken = this.totalTime;
     this.started = false;
+    this.playDone();
   }
 
   nextPage() {
@@ -91,6 +93,7 @@ export class WorkoutDemoComponent implements OnInit {
     this.resting = true;
     clearInterval(this.restTimer);
     this.restTimer = setInterval(() => this.restCountdown(), 1000);
+    this.restAudioTimer = setInterval(() => this.playAlert(), 1000*this.restTimeAllowed);
   }
 
   restCountdown() {
@@ -98,5 +101,22 @@ export class WorkoutDemoComponent implements OnInit {
     if (this.restTime == 0) {
       this.resting = false;
     }
+  }
+
+  playAlert() {
+    console.log("playing sound");
+    let alertSound = new Audio();
+    alertSound.src = "../../../assets/alert.mp3";
+    alertSound.load();
+    alertSound.play();
+    clearInterval(this.restAudioTimer);
+  }
+
+  playDone() {
+    console.log("playing celebration sound");
+    let success = new Audio();
+    success.src = "../../../assets/success.mp3";
+    success.load();
+    success.play();
   }
 }
